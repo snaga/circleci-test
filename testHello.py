@@ -1,8 +1,10 @@
 import unittest
 
+from hello import hello
+
 class TestHello(unittest.TestCase):
     def test_hello_001(self):
-        self.fail('hello')
+        self.assertEquals('hello', hello())
 
 
 if __name__ == '__main__':
