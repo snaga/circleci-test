@@ -35,6 +35,7 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
             pip install psycopg2
+            pip install pytest
 
       - save_cache:
           paths:
@@ -50,7 +51,8 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python testHello.py
+            #python testHello.py
+            py.test testHello.py
 
       - store_artifacts:
           path: test-reports
