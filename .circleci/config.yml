@@ -13,7 +13,7 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
+      - image: circleci/postgres:10.3-alpine-ram
 
     working_directory: ~/repo
 
@@ -34,6 +34,7 @@ jobs:
             virtualenv ./venv
             . venv/bin/activate
             pip install -r requirements.txt
+            pip install psycopg2
 
       - save_cache:
           paths:
