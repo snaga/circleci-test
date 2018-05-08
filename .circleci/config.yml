@@ -14,9 +14,6 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/postgres:10.3-alpine-ram
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_DB: testdb
 
     working_directory: ~/repo
 
