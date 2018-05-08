@@ -37,6 +37,7 @@ jobs:
             virtualenv ./venv
             . venv/bin/activate
             pip install -r requirements.txt
+            pip install psycopg2
 
       - save_cache:
           paths:
